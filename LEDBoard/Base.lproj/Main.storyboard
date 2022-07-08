@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LEDBoardViewController-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LEDBoardViewController" title="LEDBoardViewController" id="BYZ-38-t0r" customClass="LEDBoardViewController" customModule="LEDBoard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9sP-Kn-SPk">
+                                <rect key="frame" x="74" y="20" width="732" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVQ-xH-nym">
+                                        <rect key="frame" x="628" y="8" width="88" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="9tv-tW-R9r"/>
+                                            <constraint firstAttribute="width" constant="88" id="tmi-iS-e7u"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="linkColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="텍스트변경">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t11-pE-RGl">
+                                        <rect key="frame" x="550.5" y="8" width="61.5" height="44"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="전송">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Sq-0Y-iQS"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="검색하는텍스트필드검색하는텍스트필드검색하는텍스트필드검색하는텍스트필드검색하는텍스트필드검색하는텍스트필드검색하는텍스트필드검색하는텍스트필드검색하는텍스트필드검색하는텍스트필드검색하는텍스트필드" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="L82-ZE-JLN">
+                                        <rect key="frame" x="16" y="8" width="518.5" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="didEndOnExit:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="W1p-gL-RRw"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="cVQ-xH-nym" firstAttribute="leading" secondItem="t11-pE-RGl" secondAttribute="trailing" constant="16" id="1W4-t8-8Fu"/>
+                                    <constraint firstItem="t11-pE-RGl" firstAttribute="height" secondItem="cVQ-xH-nym" secondAttribute="height" id="Ebr-k2-frt"/>
+                                    <constraint firstItem="L82-ZE-JLN" firstAttribute="top" secondItem="9sP-Kn-SPk" secondAttribute="top" constant="8" id="HTM-mC-Mx1"/>
+                                    <constraint firstItem="L82-ZE-JLN" firstAttribute="leading" secondItem="9sP-Kn-SPk" secondAttribute="leading" constant="16" id="Nbf-kn-umA"/>
+                                    <constraint firstAttribute="bottom" secondItem="L82-ZE-JLN" secondAttribute="bottom" constant="8" id="Slo-3t-NvM"/>
+                                    <constraint firstItem="cVQ-xH-nym" firstAttribute="centerY" secondItem="9sP-Kn-SPk" secondAttribute="centerY" id="Tts-rD-jLH"/>
+                                    <constraint firstAttribute="height" constant="60" id="aeV-Xo-pyn"/>
+                                    <constraint firstItem="t11-pE-RGl" firstAttribute="leading" secondItem="L82-ZE-JLN" secondAttribute="trailing" constant="16" id="gCu-uB-M9w"/>
+                                    <constraint firstAttribute="trailing" secondItem="cVQ-xH-nym" secondAttribute="trailing" constant="16" id="jsU-VE-4vv"/>
+                                    <constraint firstItem="t11-pE-RGl" firstAttribute="centerY" secondItem="cVQ-xH-nym" secondAttribute="centerY" id="o5D-fb-Qmf"/>
+                                    <constraint firstItem="t11-pE-RGl" firstAttribute="width" secondItem="cVQ-xH-nym" secondAttribute="width" multiplier="0.7" id="qMt-C9-B0I"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라가나다라" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="1wz-9W-90A">
+                                <rect key="frame" x="74" y="99" width="748" height="216"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <fontDescription key="fontDescription" name=".AppleSDGothicNeoI-Regular" family=".Apple SD Gothic NeoI" pointSize="39"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="mainColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="9sP-Kn-SPk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="RlC-rr-Ni2"/>
+                            <constraint firstItem="1wz-9W-90A" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cyV-fv-8Q9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9sP-Kn-SPk" secondAttribute="trailing" constant="30" id="fAA-sW-Ksp"/>
+                            <constraint firstItem="9sP-Kn-SPk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="jRj-M0-gZw"/>
+                            <constraint firstItem="1wz-9W-90A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p2r-kM-Q6o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="1wz-9W-90A" secondAttribute="trailing" constant="30" id="sK2-e1-s5y"/>
+                            <constraint firstItem="1wz-9W-90A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="xYs-85-Jl2"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="KXq-NL-dYR" appends="YES" id="IqH-di-PRE"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="1wz-9W-90A" id="D7K-Ko-M1w"/>
+                        <outlet property="searchView" destination="9sP-Kn-SPk" id="Aeh-S2-Fvg"/>
+                        <outlet property="sendButton" destination="t11-pE-RGl" id="ZmR-8K-UXT"/>
+                        <outlet property="textColorButton" destination="cVQ-xH-nym" id="ZeW-aW-ReP"/>
+                        <outlet property="userTextField" destination="L82-ZE-JLN" id="yZa-q1-2h7"/>
+                        <outletCollection property="buttonList" destination="t11-pE-RGl" collectionClass="NSMutableArray" id="nBQ-mf-v6c"/>
+                        <outletCollection property="buttonList" destination="cVQ-xH-nym" collectionClass="NSMutableArray" id="xVA-xQ-Inx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="KXq-NL-dYR">
+                    <connections>
+                        <action selector="tapGestureClicked:" destination="BYZ-38-t0r" id="H8J-wp-56z"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="131.25" y="98.550724637681171"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="mainColor">
+            <color red="1" green="0.88499999046325684" blue="0.36000001430511475" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
