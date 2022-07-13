@@ -79,15 +79,14 @@ class LEDBoardViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func tapGestureClicked(_ sender: UITapGestureRecognizer) {
-        // 키보드 내리기 (여기서 view는 제스쳐를 설정해준 view)
         view.endEditing(true)
         
-        // view의 숨김여부에 따른 view 표기여부 toggle 로직
-        if (searchView.isHidden == true) {
-            searchView.isHidden = false
-        } else {
-            searchView.isHidden = true
-        }
+        // view의 숨김여부에 따른 view 표기여부 로직
+        // 방안1. 삼항연산자를 사용
+//        searchView.isHidden ? (searchView.isHidden = false) : (searchView.isHidden = true)
+        
+        // 방안2. toggle을 사용
+        searchView.isHidden.toggle()
     }
     
     @IBAction func sendButtonTapped(_ sender: UIButton) {
